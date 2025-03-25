@@ -5,7 +5,7 @@ default:
 all:
 	ansible-playbook -i frontend-dev.salman06.shop, -e ansible_user=ec2-user -e ansible_password=DevOps321 roboshop.yml -e component_name=frontend -e env=$(env)
 	ansible-playbook -i redis-dev.salman06.shop, -e ansible_user=ec2-user -e ansible_password=DevOps321 roboshop.yml -e component_name=redis -e env=$(env)
-	ansible-playbook -i mongo-dev.salman06.shop, -e ansible_user=ec2-user -e ansible_password=DevOps321 roboshop.yml -e component_name=mongodb -e env=$(env)
+	ansible-playbook -i mongodb-dev.salman06.shop, -e ansible_user=ec2-user -e ansible_password=DevOps321 roboshop.yml -e component_name=mongodb -e env=$(env)
 	ansible-playbook -i mysql-dev.salman06.shop, -e ansible_user=ec2-user -e ansible_password=DevOps321 roboshop.yml -e component_name=mysql -e env=$(env)
 	ansible-playbook -i rabbitmq-dev.salman06.shop, -e ansible_user=ec2-user -e ansible_password=DevOps321 roboshop.yml -e component_name=rabbitmq -e env=$(env)
 	ansible-playbook -i catalogue-dev.salman06.shop, -e ansible_user=ec2-user -e ansible_password=DevOps321 roboshop.yml -e component_name=catalogue -e env=$(env)
