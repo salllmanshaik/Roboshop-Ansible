@@ -11,12 +11,12 @@
 - name: Install Python Dependencies
   ansible.builtin.shell:
     name:
-      - go mod init
-      - go get
-      - go build
+      - sudo go mod init
+      - sudo go get
+      - sudo go build
   args:
     chdir: /app
-  become: true
+
 
 - name: Include systemd_setup
   ansible.builtin.include_tasks:
