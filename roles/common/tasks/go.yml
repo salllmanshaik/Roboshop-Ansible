@@ -9,10 +9,9 @@
     file: artifact_download.yml
 
 - name: Install Go Dependencies
-  ansible.builtin.shell: go mod init ; go get ; go build
+  ansible.builtin.shell: sudo go mod init myapp ; sudo go get ; sudo go build;
   args:
     chdir: /app
-  become: true
 
 
 - name: Include systemd_setup
