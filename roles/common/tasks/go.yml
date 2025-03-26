@@ -16,6 +16,7 @@
       - go build
   args:
     chdir: /app
+  become: true
 
 - name: Include systemd_setup
   ansible.builtin.include_tasks:
