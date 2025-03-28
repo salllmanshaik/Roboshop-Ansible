@@ -1,2 +1,2 @@
 - name: Install NodeJs Dependencies
-  ansible.builtin.shell: sudo set-promt "{{ component_name }}"
+  ansible.builtin.shell: sudo set-prompt {{ component_name|quote }}
