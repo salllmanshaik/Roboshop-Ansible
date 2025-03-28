@@ -1,12 +1,6 @@
 - name: Load NodeJS
   ansible.builtin.include_role:
     name: common
-    tasks_from: set-prompt
-
-
-- name: Load NodeJS
-  ansible.builtin.include_role:
-    name: common
     tasks_from: nodejs
 
 - name: Copy MongoDB repo file
