@@ -12,3 +12,4 @@ SyslogIdentifier={{ component_name }}
 
 [Install]
 WantedBy=multi-user.target
+
