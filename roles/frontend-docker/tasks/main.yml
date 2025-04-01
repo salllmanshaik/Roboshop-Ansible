@@ -6,7 +6,7 @@
 - name: Get secrets for this app
   ansible.builtin.set_fact:
     component_secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'roboshop-{{ env }}/data/{{ component }} token={{ vault_token }} url=http://vault-internal.salman06.shop:8200') }}"
-
+    component: frontend
 - name: Create container secrects
   ansible.builtin.lineinfile:
     path: /opt/{{ component_name }}.env
