@@ -26,7 +26,7 @@
     component_secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'roboshop-{{ env }}/data/{{ component }} token={{ vault_token }} url=http://vault-internal.salman06.shop:8200') }}"
     component: "{{ component | regex_replace('-docker', '') }}"
   vars:
-    component: "{{ component | regex_replace('-docker', '') }}"
+    component: "{{ component_name | regex_replace('-docker', '') }}"
 
 
 - name: Create container secrects
