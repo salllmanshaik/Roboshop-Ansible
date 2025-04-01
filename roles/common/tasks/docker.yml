@@ -6,6 +6,7 @@
 
 - name: Install docker
   ansible.builtin.dnf:
+    become: yes
     name:
       - docker-ce
       - docker-ce-cli
