@@ -2,5 +2,6 @@
   ansible.builtin.include_role:
     name: common
     tasks_from: docker
-
+  vars:
+    app_port: 8080
 
