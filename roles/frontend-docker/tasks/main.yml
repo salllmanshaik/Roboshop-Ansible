@@ -12,6 +12,7 @@
   ansible.builtin.lineinfile:
     path: /opt/{{ component_name }}.env
     line: "{{item.key}}={{item.value}}"
+    create: yes
   loop: "{{ component_secrets|dict2items }}"
 
 - name: Run Frontend Docker
