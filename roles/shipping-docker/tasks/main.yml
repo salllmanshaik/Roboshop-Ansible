@@ -5,3 +5,18 @@
   vars:
     app_port: 8080
 
+
+- name: Load schema
+  community.docker.docker_container:
+    name: catalogue-{{item}}
+    image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
+    state: started
+    recreate: true
+    env_file: /opt/catalogue.env
+    env:
+      SCHEMA_FILE: "db/{{ item }}.sql"
+  loop:
+    - app-user
+    - schema
+    - master-data
+
