@@ -1,5 +1,5 @@
 - name: Increase disk
-  ansible.builtin.shell: growpart /dev/nvme0n1 4 ; lvextend -r -l 100%FREE /dev/mapper/ROOTVG-varVol
+  ansible.builtin.shell: growpart /dev/nvme0n1 4 ; lvextend -r -l 100%FREE /dev/mapper/ROOTVG-varVo1
   ignore_errors: yes
 
 
