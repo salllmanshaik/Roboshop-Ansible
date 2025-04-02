@@ -7,7 +7,7 @@
 
 - name: Load schema
   community.docker.docker_container:
-    name: catalogue-schema
+    name: "catalogue-schema"
     image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
     state: started
     recreate: true
