@@ -6,7 +6,7 @@
 
 - name: Include artifact_download
   ansible.builtin.include_tasks:
-    file: artifact_download.yml
+    file: artifact_download.yaml
 
 - name: Install Go Dependencies
   ansible.builtin.shell: sudo go mod init myapp ; sudo go get ; sudo go build;
@@ -16,7 +16,7 @@
 
 - name: Include systemd_setup
   ansible.builtin.include_tasks:
-    file: systemd_setup.yml
+    file: systemd_setup.yaml
 
 
 

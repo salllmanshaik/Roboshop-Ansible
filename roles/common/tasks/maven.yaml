@@ -5,7 +5,7 @@
 
 - name: Include artifact_download
   ansible.builtin.include_tasks:
-    file: artifact_download.yml
+    file: artifact_download.yaml
 
 - name: Install Maven Dependencies
   ansible.builtin.shell: mvn clean package ; mv target/{{ component_name }}-1.0.jar {{ component_name }}.jar
@@ -14,5 +14,5 @@
 
 - name: Include systemd_setup
   ansible.builtin.include_tasks:
-    file: systemd_setup.yml
+    file: systemd_setup.yaml
 

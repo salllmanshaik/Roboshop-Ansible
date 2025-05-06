@@ -8,7 +8,7 @@
 
 - name: Include artifact_download
   ansible.builtin.include_tasks:
-    file: artifact_download.yml
+    file: artifact_download.yaml
 
 - name: Install NodeJs Dependencies
   ansible.builtin.shell: sudo npm install
@@ -17,5 +17,5 @@
 
 - name: Include systemd_setup
   ansible.builtin.include_tasks:
-    file: systemd_setup.yml
+    file: systemd_setup.yaml
 
